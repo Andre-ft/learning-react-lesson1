@@ -1,6 +1,7 @@
 import React from 'react';
 import paintings from './paintings.json';
-import Painting from './components/Painting';
+import PaintingList from './components/PaintingList';
+// import Painting from './components/Painting';
 
 export default function App() {
   const element = React.createElement(
@@ -40,7 +41,7 @@ export default function App() {
       tag: 'ractapopulous',
       url: 'https://pixabay.com/users/ractapopulous-24766/',
     },
-    quantity: 10,
+    quantity: '10',
   };
 
   const onePainting = (
@@ -65,6 +66,22 @@ export default function App() {
     jsxElement,
     nextJsxElement,
     onePainting,
-    <Painting key="aag" a="5" b={{ c: 1 }} data={data} />,
+    <div key={'gfgf'}>
+      <PaintingList items={paintings} />
+    </div>,
+    // <Painting key="aag" {...data} />,
+    // <div>
+    //   {paintings.map(painting => (
+    //     <Painting key={painting.id} {...painting} />
+    //   ))}
+    // </div>,
+    // <Painting
+    //   key="aag"
+    //   url={data.url}
+    //   title={data.title}
+    //   author={data.author}
+    //   price={data.price}
+    //   quantity={data.quantity}
+    // />,
   ];
 }
