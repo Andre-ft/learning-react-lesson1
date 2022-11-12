@@ -1,6 +1,7 @@
 import React from 'react';
 import paintings from './paintings.json';
 import PaintingList from './components/PaintingList';
+import Section from './components/Section';
 // import Painting from './components/Painting';
 
 export default function App() {
@@ -67,7 +68,11 @@ export default function App() {
     nextJsxElement,
     onePainting,
     <div key={'gfgf'}>
-      <PaintingList items={paintings} />
+      <Section title={'Top of week'}>
+        <PaintingList items={paintings} />
+      </Section>
+
+      <Section />
     </div>,
     // <Painting key="aag" {...data} />,
     // <div>
